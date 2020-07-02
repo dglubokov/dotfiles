@@ -1,0 +1,33 @@
+# Font configuration (changes require restart)
+font:
+  # The normal (roman) font face to use.
+  normal:
+    family: monospace
+    # Style can be specified to pick a specific face.
+    style: Regular
+
+  # The bold font face
+  bold:
+    family: monospace
+    # Style can be specified to pick a specific face.
+    style: Bold
+
+  # The italic font face
+  italic:
+    family: monospace
+    # Style can be specified to pick a specific face.
+    style: Italic
+    white: '#828282'
+
+colors:
+    primary:
+      background: '#212121'
+    normal:
+      black: '#4f4f4f'
+      red: '#ff5555'
+      green: '#aaff77'
+      yellow: '#fba922'
+      blue: '#0ed0c6'
+      magenta: '#ff73fd'
+      cyan: '#15d1a3'
+      white: '#f5f5f5'
