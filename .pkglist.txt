@@ -5,6 +5,7 @@ telegram-desktop
 texlive-most
 texlive-langcyrillic
 i3-gaps
+i3lock
 virtualbox
 python
 python-pip
