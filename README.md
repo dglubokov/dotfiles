@@ -16,3 +16,11 @@
 
 [wallpaper](https://www.pexels.com/photo/aerial-view-of-seashore-near-large-grey-rocks-853199/)
 
+**preinstalled packages**:
+
+- linux
+- base
+- dhcpcd
+- iwd
+- git
+- nano/vim

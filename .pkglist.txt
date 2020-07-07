@@ -29,3 +29,5 @@ bluez-utils
 ntfs-3g
 xreader
 djvulibre
+docker
+docker-compose
