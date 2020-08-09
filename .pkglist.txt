@@ -16,7 +16,7 @@ jupyter-notebook
 texlive-most
 texlive-langcyrillic
 feh
-fff
+pcmanfm
 dmenu
 flameshot
 aria2
