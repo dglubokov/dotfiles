@@ -1,4 +1,7 @@
 bash-completion
+wget
+acpi
+light
 firefox
 pulseaudio
 pulseaudio-alsa
@@ -19,6 +22,7 @@ feh
 pcmanfm
 dmenu
 flameshot
+i3lock
 aria2
 virtualbox
 hugo
@@ -28,3 +32,4 @@ xreader
 djvulibre
 docker
 docker-compose
+reflector
