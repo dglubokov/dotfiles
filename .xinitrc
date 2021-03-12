@@ -1,18 +1,20 @@
 # util for nvidia/intel GPU
 prime-offload;
-# ru/eng keyboard layouts
-setxkbmap -layout us,ru -option grp:alt_shift_toggle;
 # dwm status
 while true; do
     VOLUME=$( amixer sget Master | grep -e 'Front Left:' | \
         sed 's/[^\[]*\[\([0-9]\{1,3\}%\).*\(on\|off\).*/\2 \1/' | sed 's/off/M/' | sed 's/on //' )
     DT=$(date +"%F %R")
-    BATT=$(acpi -b | sed 's/.*[charging|unknown], \([0-9]*\)%.*/\1/gi')
-    STATUS=$(acpi -b | sed 's/.*: \([a-zA-Z]*\),.*/\1/gi')
+    BATT=$(acpi | awk '{print $4}')
+    STATUS=$(acpi | awk '{print $3}')
     MEM=$(free -m | grep '^Mem' | awk '{print "used: " $3"MB"}')
-    d_used=$(df -h | grep '/dev/nvme0n1p2' |awk '{print $3}')
-    d_av=$(df -h | grep '/dev/nvme0n1p2' |awk '{print $4}')
-    xsetroot -name "[ ${VOLUME} ][ ${DT} ][ ${STATUS} ${BATT}% ][ ${MEM} ][ ${d_used}/${d_av} ]"
+    MEM_ALL=$(free -m | grep '^Mem' | awk '{print $2"MB"}')
+    DATA_USED=$(df -h | grep '/dev/nvme0n1p2' |awk '{print $3}')
+    DATA_ALL=$(df -h | grep '/dev/nvme0n1p2' |awk '{print $2}')
+    xsetroot -name "[ ${VOLUME} ][ ${DT} ][ ${STATUS} ${BATT} ][ ${MEM}/${MEM_ALL} ][ ${DATA_USED}/${DATA_ALL} ]"
     sleep 1s
 done &
+# ru/eng keyboard layouts
+setxkbmap -layout us,ru -option grp:alt_shift_toggle &
+exec flameshot &
 exec dwm

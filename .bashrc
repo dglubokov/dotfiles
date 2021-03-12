@@ -9,19 +9,31 @@
 alias ..="cd .."
 alias ...="cd ../.."
 alias h="cd /mnt/hdd"
-
-# ls to exa
-alias ls="exa -l --color=always --group-directories-first"
-alias la="exa -al --color=always --group-directories-first"
-alias lt="exa -T --level 2 --color=always --group-directories-first"
+alias ls="ls --color=auto --group-directories-first"
+alias la="ls -AlhX"
+alias du="du -sh .[!.]* * | sort -h"
 
 # update packages
 alias u="yay -Syu --noconfirm"
 
-# other
+# vim
+alias v="vim"
+
+# keyboard layout
 alias cl="setxkbmap -layout us,ru -option grp:alt_shift_toggle"
-alias bu="echo 5000 | sudo tee /sys/class/backlight/intel_backlight/brightness"
-alias bl="echo 3000 | sudo tee /sys/class/backlight/intel_backlight/brightness"
+
+# for two monitors
+alias m2="xrandr --output eDP-1-1 --auto --left-of HDMI-0"
+
+# start X session
+alias s="startx"
+
+alias l="less"
+alias r="rclone mount --daemon gdrive: ~/gdrive/"
+
+
+export PKG_CONFIG_PATH
+PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:
 
 # pretty input
 export PS1="\[$(tput bold)\]\[\033[38;5;2m\] /ᐠ. ᴗ.ᐟ\ \[$(tput sgr0)\]: \[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;4m\]\w\[$(tput sgr0)\]\\$ \[$(tput sgr0)\]"
