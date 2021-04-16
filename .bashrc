@@ -23,7 +23,7 @@ alias v="vim"
 alias cl="setxkbmap -layout us,ru -option grp:alt_shift_toggle"
 
 # for two monitors
-alias m2="xrandr --output eDP-1-1 --auto --left-of HDMI-0"
+alias m2="xrandr --output eDP-1-1 --auto --right-of HDMI-0"
 
 # start X session
 alias s="startx"
@@ -31,6 +31,8 @@ alias s="startx"
 alias l="less"
 alias r="rclone mount --daemon gdrive: ~/gdrive/"
 
+# ssh
+alias bx="ssh dglubokov@biomics.devbg.us"
 
 export PKG_CONFIG_PATH
 PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:

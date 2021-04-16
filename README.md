@@ -14,7 +14,6 @@
 
 - linux
 - base
-- dhcpcd
 - iwd
 - git
 - vim

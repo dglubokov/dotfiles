@@ -11,8 +11,9 @@ while true; do
     MEM_ALL=$(free -m | grep '^Mem' | awk '{print $2"MB"}')
     DATA_USED=$(df -h | grep '/dev/nvme0n1p2' |awk '{print $3}')
     DATA_ALL=$(df -h | grep '/dev/nvme0n1p2' |awk '{print $2}')
-    xsetroot -name "[ ${VOLUME} ][ ${DT} ][ ${STATUS} ${BATT} ][ ${MEM}/${MEM_ALL} ][ ${DATA_USED}/${DATA_ALL} ]"
-    sleep 1s
+    NET=$(vnstat -i wlan0 -tr 2 | grep rx | awk '{print "receive: " $2 " " $3}')
+    xsetroot -name "[ ${VOLUME} ][ ${DT} ][ ${STATUS} ${BATT} ][ ${MEM}/${MEM_ALL} ][ ${DATA_USED}/${DATA_ALL} ][ ${NET} ]"
+    sleep 2s
 done &
 # ru/eng keyboard layouts
 setxkbmap -layout us,ru -option grp:alt_shift_toggle &
