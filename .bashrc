@@ -33,6 +33,8 @@ alias r="rclone mount --daemon gdrive: ~/gdrive/"
 
 # ssh
 alias bx="ssh dglubokov@biomics.devbg.us"
+alias b1="ssh common@squire.devbg.us"
+alias b2="ssh common@squire-test.devbg.us"
 
 export PKG_CONFIG_PATH
 PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:
