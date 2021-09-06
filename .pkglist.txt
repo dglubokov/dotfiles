@@ -39,6 +39,5 @@ npm
 openconnect
 transmission-qt
 tumbler
-tumbler-extra-thumbnailers
 unrar
 unzip

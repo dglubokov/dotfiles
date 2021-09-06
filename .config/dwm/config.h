@@ -54,7 +54,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 
 static const char *prntscrn[] = {"flameshot", "gui", NULL};
-static const char *chromium[] = {"chromium", NULL};
+static const char *firefox[] = {"firefox", NULL};
 static const char *code[] = {"code", NULL};
 
 /* for fn keys*/
@@ -70,7 +70,7 @@ static Key keys[] = {
 	{ 0,                            XF86XK_AudioRaiseVolume,    spawn,      {.v = raisevol } },
 	{ 0,                            XF86XK_AudioLowerVolume,    spawn,      {.v = lowervol } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = prntscrn } },
-	{ MODKEY,                       XK_n,      spawn,          {.v = chromium } },
+	{ MODKEY,                       XK_n,      spawn,          {.v = firefox } },
 	{ MODKEY,                       XK_c,      spawn,          {.v = code } },
 	{ MODKEY,                       XK_s,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
